@@ -12,9 +12,19 @@ end
 
 def assign_rooms(array)
   msg=[]
-  array.each do |name|
-    msg.push("Hello, #{name}! You'll be assigned to room #{name.index+1}!")
+  array.each.with_index(1) do |name, index|
+    msg.push("Hello, #{name}! You'll be assigned to room #{index}!")
   end
   msg
 end
 
+
+def printer()
+  for item in batch_badge_creator()
+    puts item
+  end
+  for item in assign_rooms()
+    puts item
+  end
+    
+end
